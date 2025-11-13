@@ -35,11 +35,13 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- loader css link -->
     <link rel="stylesheet" href="css/loader.css">
+    <!-- loader js link -->
+
 </head>
 
 <body>
     <!-- PENCIL LOADER -->
-    <!-- <div id="page-loader">
+    <div id="page-loader">
         <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
             <defs>
                 <clipPath id="pencil-eraser">
@@ -76,9 +78,9 @@
                 </g>
             </g>
         </svg>
-    </div> -->
+    </div>
     <!-- Topbar Start -->
-    <div class="container-fluid" style="background-color: rgb(204, 0, 0);">
+    <div class="container-fluid" style="background-color: #E20613;">
         <div class="row py-2 px-lg-5">
             <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center text-white">
@@ -116,9 +118,13 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
-                <img src="img/THE AMERICAN LANGUAGE CENTRE.png" alt="Edukate Logo" style="height: 85px; width: auto;"
+                <img src="img/new_alc_logo.png" alt="Edukate Logo" style="height: 200px; width: auto;"
                     class="d-inline-block align-top">
             </a>
+             <!-- <a href="index.html" class="navbar-brand ml-lg-3">
+                <img src="img/THE AMERICAN LANGUAGE CENTRE.png" alt="Edukate Logo" style="height: 85px; width: auto;"
+                    class="d-inline-block align-top">
+            </a> -->
 
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -431,22 +437,20 @@
 
     <!-- Footer Start -->
     <div class="container-fluid position-relative overlay-top text-white-50 py-5"
-        style="margin-top: 90px;background-color: rgb(0, 32, 96);">
+        style="margin-top: 90px;background-color: #312782;">
         <div class="container mt-5 pt-5">
             <div class="row">
                 <div class="col-md-6 mb-5">
                     <a href="index.html" class="navbar-brand text-decoration-none">
-                        <div class="logo-container"
-                            style="background: white; border-radius: 15px; padding: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
-                            <div class="logo-box"
-                                style="display: flex; align-items: center; justify-content: center; padding: 15px; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 10px; border: 1px solid rgba(0, 0, 0, 0.05);">
-                                <img src="img/THE AMERICAN LANGUAGE CENTRE.png" alt="American Language Centre Logo"
+                       
+                            
+                                <img src="img/Website.png" alt="American Language Centre Logo"
                                     style="height: 85px; width: auto; filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));"
                                     class="d-inline-block align-top">
-                            </div>
+                            
                             <!-- <div class="institution-name" style="font-weight: 700; color: #2c3e50; margin-top: 15px; text-align: center; font-size: 1.2rem;">American Language Centre</div>
                             <div class="institution-tagline" style="color: #7f8c8d; text-align: center; font-size: 0.9rem; margin-top: 5px;">Excellence in Language Education</div> -->
-                        </div>
+                       
                     </a>
                 </div>
                 <div class="col-md-6 mb-5">
@@ -507,7 +511,7 @@
   <span class="whatsapp-tooltip">Contact us on WhatsApp</span>
 </a>
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg rounded-0 btn-lg-square back-to-top" style="background-color: rgb(0, 32, 96);"><i
+    <a href="#" class="btn btn-lg rounded-0 btn-lg-square back-to-top" style="background-color: #312782;"><i
             class="fa fa-angle-double-up"></i></a>
 
 
@@ -522,6 +526,36 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
+
+// for loader code start
+
+ 
+       // Wait for the page to fully load
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        const loader = document.getElementById('page-loader');
+        const mainContent = document.querySelector('body > :not(#page-loader)');
+
+        if (loader) {
+            // Add fade-out class to loader
+            loader.classList.add('fade-out');
+
+            // Remove loader after animation completes
+            setTimeout(function() {
+                loader.remove();
+                
+                // Enable smooth scrolling for the entire page
+                document.documentElement.style.scrollBehavior = 'smooth';
+                document.body.style.scrollBehavior = 'smooth';
+            }, 500); // Match with your CSS transition time
+        }
+    }, 2000); // Adjust this delay to control loader visibility duration
+});;
+
+    
+
+// for loader code end
+
         const texts = ['English Language Proficiency Programs', 'Education Courses'];
         let i = 0, j = 0, del = false;
         const el = document.getElementById('typed');
@@ -541,17 +575,7 @@
             setTimeout(type, del ? 50 : 100);
         }
         type();
-        const loader = document.getElementById('page-loader');
-        const start = Date.now();
-
-        function hideLoader() {
-            const elapsed = Date.now() - start;
-            const wait = Math.max(2000 - elapsed, 0);
-            setTimeout(() => loader.classList.add('hidden'), wait);
-        }
-
-        window.addEventListener('load', hideLoader);
-        setTimeout(hideLoader, 2000); // safety fallback
+       
 
         // for whatsapp button tooltip
         document.addEventListener('DOMContentLoaded', function() {
@@ -560,6 +584,7 @@
           alert('In a real implementation, this would open a WhatsApp chat.');
       });
   });
+
 
     </script>
 

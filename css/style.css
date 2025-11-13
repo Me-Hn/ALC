@@ -4561,6 +4561,10 @@ input[type="button"].btn-block {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  /* Add these lines to control logo size */
+  height: 60px; /* Fixed height for navbar brand area */
+  display: flex;
+  align-items: center; /* Vertically center the logo */
 }
 
 .navbar-brand:hover,
@@ -4568,12 +4572,32 @@ input[type="button"].btn-block {
   text-decoration: none;
 }
 
+/* Add this rule to control the logo image specifically */
+.navbar-brand img {
+  max-height: 190px; /* Control logo height */
+  width: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+/* Optional: Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  .navbar-brand {
+    height: 50px; /* Slightly smaller on mobile */
+  }
+  
+  .navbar-brand img {
+    max-height: 140px; /* Smaller logo on mobile */
+    position: relative;
+    right: 20px;
+  }
+}
+
 #join-us-btn {
-  background-color: rgb(204, 0, 0)
+  background-color: #E20613;
 }
 
 #join-us-btn:hover {
-  background-color: rgb(0, 32, 96);
+  background-color: #312782;
 }
 
 .navbar-nav {
@@ -11063,7 +11087,7 @@ h6,
 
 .hero-btn:hover {
   letter-spacing: 3px;
-  background-color: rgb(0, 32, 96);
+  background-color: #312782;
   color: wheat;
   box-shadow: white 0px 0px 5px 5px;
 }
@@ -11573,7 +11597,7 @@ h6,
   align-items: center;
   justify-content: center;
   color: #FFFFFF;
-  background: rgb(0, 32, 96);
+  background: #312782;
   font-size: 22px;
   transition: .5s;
 }
@@ -11582,7 +11606,7 @@ h6,
 .team-carousel .owl-nav .owl-next:hover,
 .related-carousel .owl-nav .owl-prev:hover,
 .related-carousel .owl-nav .owl-next:hover {
-  background: rgb(204, 0, 0);
+  background: #E20613;
 }
 
 .testimonial-carousel .owl-item img {
