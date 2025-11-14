@@ -11144,6 +11144,10 @@ h6,
   /* color: rgb(0, 0, 0) !important; */
 }
 
+.text-white::selection{
+  background: #ffffff;
+  color: #120F2D;
+}
 
 .text-content {
   max-width: 500px;
