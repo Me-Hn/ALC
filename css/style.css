@@ -62,6 +62,10 @@ section {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -71,6 +75,7 @@ body {
   color: #6B6A75;
   text-align: left;
   background-color: #FFFFFF;
+
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -4562,9 +4567,11 @@ input[type="button"].btn-block {
   line-height: inherit;
   white-space: nowrap;
   /* Add these lines to control logo size */
-  height: 60px; /* Fixed height for navbar brand area */
+  height: 60px;
+  /* Fixed height for navbar brand area */
   display: flex;
-  align-items: center; /* Vertically center the logo */
+  align-items: center;
+  /* Vertically center the logo */
 }
 
 .navbar-brand:hover,
@@ -4574,19 +4581,23 @@ input[type="button"].btn-block {
 
 /* Add this rule to control the logo image specifically */
 .navbar-brand img {
-  max-height: 190px; /* Control logo height */
-  width: auto; /* Maintain aspect ratio */
+  max-height: 190px;
+  /* Control logo height */
+  width: auto;
+  /* Maintain aspect ratio */
   display: block;
 }
 
 /* Optional: Responsive adjustment for smaller screens */
 @media (max-width: 768px) {
   .navbar-brand {
-    height: 50px; /* Slightly smaller on mobile */
+    height: 50px;
+    /* Slightly smaller on mobile */
   }
-  
+
   .navbar-brand img {
-    max-height: 140px; /* Smaller logo on mobile */
+    max-height: 140px;
+    /* Smaller logo on mobile */
     position: relative;
     right: 20px;
   }
@@ -10718,12 +10729,6 @@ button.bg-dark:focus {
   font-style: italic !important;
 }
 
-.text-white {
- 
-  color: rgb(0, 32, 96) !important;
-  /* color: rgb(204, 0, 0) !important; */
-  /* color: rgb(0, 0, 0) !important; */
-}
 
 .text-primary {
   color: #2878EB !important;
@@ -11123,11 +11128,22 @@ h6,
 
 .content-container {
   display: flex;
-  justify-content: flex-start; /* keeps content on left side */
+  justify-content: flex-start;
+  /* keeps content on left side */
   align-items: center;
   min-height: 400px;
-  padding-left: 5%; /* ✅ adds spacing that's responsive */
+  padding-left: 5%;
+  /* ✅ adds spacing that's responsive */
 }
+
+.text-white {
+
+  color: #ffffff !important;
+  /* color: rgb(0, 32, 96) !important; */
+  /* color: rgb(204, 0, 0) !important; */
+  /* color: rgb(0, 0, 0) !important; */
+}
+
 
 .text-content {
   max-width: 500px;
@@ -11138,6 +11154,7 @@ h6,
 .text-content h1 {
   font-weight: 700;
   margin-bottom: 10px;
+
 }
 
 .text-content p {
@@ -11187,6 +11204,93 @@ h6,
   left: 0;
   z-index: 1;
 }
+
+/* contact section start */
+
+/* Background floating icons */
+.bg-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+#icon-zoom {
+  transition: transform 0.3s ease;
+}
+
+#icon-zoom:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+/* Individual icons */
+.bg-icon {
+  position: absolute;
+  font-size: 3rem;
+  color: #0d6efd;
+  animation: float 12s infinite linear;
+  pointer-events: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect ONLY on icons */
+.bg-icon:hover {
+  transform: scale(1.4);
+}
+
+/* Icon positions */
+.bg-icon:nth-child(1) {
+  top: 20%;
+  left: 10%;
+}
+
+.bg-icon:nth-child(2) {
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.bg-icon:nth-child(3) {
+  bottom: 15%;
+  left: 50%;
+  animation-delay: 4s;
+}
+
+/* Floating movement */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-20px);
+  }
+
+  60% {
+    transform: translateY(0);
+  }
+
+  90% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.container-fluid.py-5 {
+  position: relative;
+  overflow: hidden;
+}
+
+/*contact section end */
 
 .overlay-top::before {
   top: 0;
@@ -11857,77 +11961,109 @@ h6,
 
 /* whatsapp buttton start */
 
- /* WhatsApp Button Styles */
+/* WhatsApp Button Styles */
+.whatsapp-button {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  background-color: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-button:hover {
+  background-color: #128C7E;
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  background-color: #075E54;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@media (max-width: 768px) {
   .whatsapp-button {
-      position: fixed;
-      bottom: 25px;
-      left: 25px;
-      background-color: #25D366;
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 30px;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      z-index: 1000;
-      animation: pulse 2s infinite;
+    width: 55px;
+    height: 55px;
+    font-size: 26px;
+    bottom: 20px;
+    left: 20px;
   }
-
-  .whatsapp-button:hover {
-      background-color: #128C7E;
-      transform: scale(1.1);
-      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-  }
-
-  .whatsapp-tooltip {
-      position: absolute;
-      bottom: 70px;
-      left: 0;
-      background-color: #075E54;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-size: 14px;
-      white-space: nowrap;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: all 0.3s ease;
-      pointer-events: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .whatsapp-button:hover .whatsapp-tooltip {
-      opacity: 1;
-      transform: translateY(0);
-  }
-
-  @keyframes pulse {
-      0% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-      }
-      70% {
-          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-      }
-      100% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
-  }
-
-  @media (max-width: 768px) {
-      .whatsapp-button {
-          width: 55px;
-          height: 55px;
-          font-size: 26px;
-          bottom: 20px;
-          left: 20px;
-      }
-  }
+}
 
 /* whatsapp button End */
+
+/* footer logo */
+/* Desktop default styles */
+.footer-logo {
+  height: 200px;
+  width: auto;
+  position: relative;
+  right: 120px;
+}
+
+/* Mobile responsive (max-width: 576px) */
+@media (max-width: 576px) {
+  #footer-logo {
+    text-align: center;
+  }
+
+  #footer-logo {
+    height: 120px;
+    /* Smaller on mobile */
+    position: relative;
+    /* Reset position */
+    padding-left: 135px;
+    /*       Remove offset */
+    margin: 0 auto;
+    /* Center the logo */
+    display: block;
+    padding-top: 0px;
+
+  }
+}

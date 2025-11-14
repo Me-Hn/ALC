@@ -36,6 +36,7 @@
     <!-- loader css link -->
     <link rel="stylesheet" href="css/loader.css">
     <!-- loader js link -->
+    <script src="js/loader.js"></script>
 
 </head>
 
@@ -121,7 +122,7 @@
                 <img src="img/new_alc_logo.png" alt="Edukate Logo" style="height: 200px; width: auto;"
                     class="d-inline-block align-top">
             </a>
-             <!-- <a href="index.html" class="navbar-brand ml-lg-3">
+            <!-- <a href="index.html" class="navbar-brand ml-lg-3">
                 <img src="img/THE AMERICAN LANGUAGE CENTRE.png" alt="Edukate Logo" style="height: 85px; width: auto;"
                     class="d-inline-block align-top">
             </a> -->
@@ -157,8 +158,10 @@
         <div class="container">
             <div class="content-container">
                 <div class="text-content">
-                    <h1 class="text-white" id="">Proficiency in English Language</h1>
-                    <h2 class="text-white">Education Courses</h2>
+                    <!-- <h1 class="text-white" id="typed">Proficiency in English Language</h1>
+                    <h2 class="text-white">Education Courses</h2> -->
+                    <h1 class="text-white" id="typed"></h1>
+
                     <p>Expand your knowledge and skills with our comprehensive online courses. Learn from industry
                         experts at your own pace, with flexible schedules designed for today's busy professionals.</p>
                     <!-- <a href="#" class="btn btn-primary">Explore Courses</a> -->
@@ -363,13 +366,24 @@
 
     <!-- Contact Start -->
     <div class="container-fluid py-5">
+        <!-- Background Floating Icons -->
+        <div class="bg-icons">
+            <i class="fas fa-phone bg-icon" style="color: #E20613;"></i>
+            <i class="fas fa-envelope bg-icon" style="position: relative; left: 20px;"></i>
+            <i class="fas fa-map-marker-alt bg-icon" style="position: relative; top: 20px; left: 90%;"></i>
+            <i class="fas fa-paper-plane bg-icon"
+                style="position: relative; top: 380px; left: 90%; color: #E20613;"></i></i>
+            <i class="fas fa-headset bg-icon" style="position: relative; top: 50px; left: 50%; color: #E20613;"></i>
+            <i class="fas fa-address-book bg-icon" style="position: relative; top: 90%; left: 30%; color: #E20613;"></i>
+        </div>
+
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-5 mb-lg-0">
                     <div class="bg-light d-flex flex-column justify-content-center px-5" style="height: 450px;">
                         <div class="d-flex align-items-center mb-5">
                             <div class="btn-icon bg-primary mr-4">
-                                <i class="fa fa-2x fa-map-marker-alt text-white"></i>
+                                <i class="fa fa-2x fa-map-marker-alt text-white" id="icon-zoom"></i>
                             </div>
                             <div class="mt-n1">
                                 <h4>Our Location</h4>
@@ -378,7 +392,7 @@
                         </div>
                         <div class="d-flex align-items-center mb-5">
                             <div class="btn-icon bg-secondary mr-4">
-                                <i class="fa fa-2x fa-phone-alt text-white"></i>
+                                <i class="fa fa-2x fa-phone-alt text-white" id="icon-zoom"></i>
                             </div>
                             <div class="mt-n1">
                                 <h4>Call Us</h4>
@@ -387,7 +401,7 @@
                         </div>
                         <div class="d-flex align-items-center">
                             <div class="btn-icon bg-warning mr-4">
-                                <i class="fa fa-2x fa-envelope text-white"></i>
+                                <i class="fa fa-2x fa-envelope text-white" id="icon-zoom"></i>
                             </div>
                             <div class="mt-n1">
                                 <h4>Email Us</h4>
@@ -424,7 +438,8 @@
                                     placeholder="Message" required="required"></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                                <button class="btn py-3 px-5 text-white" type="submit" id="join-us-btn">Send
+                                    Message</button>
                             </div>
                         </form>
                     </div>
@@ -440,17 +455,11 @@
         style="margin-top: 90px;background-color: #312782;">
         <div class="container mt-5 pt-5">
             <div class="row">
-                <div class="col-md-6 mb-5">
+                <div class="col-md-6 mb-5" id="footer-logo">
                     <a href="index.html" class="navbar-brand text-decoration-none">
-                       
-                            
-                                <img src="img/Website.png" alt="American Language Centre Logo"
-                                    style="height: 85px; width: auto; filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));"
-                                    class="d-inline-block align-top">
-                            
-                            <!-- <div class="institution-name" style="font-weight: 700; color: #2c3e50; margin-top: 15px; text-align: center; font-size: 1.2rem;">American Language Centre</div>
-                            <div class="institution-tagline" style="color: #7f8c8d; text-align: center; font-size: 0.9rem; margin-top: 5px;">Excellence in Language Education</div> -->
-                       
+                        <img src="img/footer-logo.png" alt="American Language Centre Logo"
+                            style="height: 200px; width: auto; position: relative; right: 120px;"
+                            class="d-inline-block align-top">
                     </a>
                 </div>
                 <div class="col-md-6 mb-5">
@@ -460,7 +469,7 @@
                             <input type="text" class="form-control border-light" style="padding: 30px;"
                                 placeholder="Your Email Address">
                             <div class="input-group-append">
-                                <button class="btn btn-primary px-4">Sign Up</button>
+                                <button class="btn px-4 text-white" style="background-color: #E20613;">Sign Up</button>
                             </div>
                         </div>
                     </div>
@@ -473,10 +482,10 @@
                     <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
                     <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
                     <div class="d-flex justify-content-start mt-4">
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-twitter"></i></a>
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
-                        <a class="text-white" href="#"><i class="fab fa-2x fa-instagram"></i></a>
+                        <a class="text-white mr-4 twitter" href="#"><i class="fab fa-2x fa-twitter"></i></a>
+                        <a class="text-white mr-4 facebook" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
+                        <a class="text-white mr-4 linkedin" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
+                        <a class="text-white instagram" href="#"><i class="fab fa-2x fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -505,11 +514,11 @@
     </div>
     <!-- Footer End -->
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-  <span class="whatsapp-tooltip">Contact us on WhatsApp</span>
-</a>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Contact us on WhatsApp</span>
+    </a>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg rounded-0 btn-lg-square back-to-top" style="background-color: #312782;"><i
             class="fa fa-angle-double-up"></i></a>
@@ -527,34 +536,10 @@
     <script src="js/main.js"></script>
     <script>
 
-// for loader code start
 
- 
-       // Wait for the page to fully load
-window.addEventListener('load', function() {
-    setTimeout(function() {
-        const loader = document.getElementById('page-loader');
-        const mainContent = document.querySelector('body > :not(#page-loader)');
 
-        if (loader) {
-            // Add fade-out class to loader
-            loader.classList.add('fade-out');
 
-            // Remove loader after animation completes
-            setTimeout(function() {
-                loader.remove();
-                
-                // Enable smooth scrolling for the entire page
-                document.documentElement.style.scrollBehavior = 'smooth';
-                document.body.style.scrollBehavior = 'smooth';
-            }, 500); // Match with your CSS transition time
-        }
-    }, 2000); // Adjust this delay to control loader visibility duration
-});;
-
-    
-
-// for loader code end
+        // for loader code end
 
         const texts = ['English Language Proficiency Programs', 'Education Courses'];
         let i = 0, j = 0, del = false;
@@ -575,15 +560,15 @@ window.addEventListener('load', function() {
             setTimeout(type, del ? 50 : 100);
         }
         type();
-       
+
 
         // for whatsapp button tooltip
-        document.addEventListener('DOMContentLoaded', function() {
-      const whatsappButton = document.querySelector('.whatsapp-button');
-      whatsappButton.addEventListener('click', function() {
-          alert('In a real implementation, this would open a WhatsApp chat.');
-      });
-  });
+        document.addEventListener('DOMContentLoaded', function () {
+            const whatsappButton = document.querySelector('.whatsapp-button');
+            whatsappButton.addEventListener('click', function () {
+                alert('In a real implementation, this would open a WhatsApp chat.');
+            });
+        });
 
 
     </script>
