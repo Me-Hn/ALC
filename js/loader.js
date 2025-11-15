@@ -1,46 +1,55 @@
-    // for loader code start
+// for loader code start
 
 
-        // Wait for the page to fully load
-        window.addEventListener('load', function () {
+// Wait for the page to fully load
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        const loader = document.getElementById('page-loader');
+        const mainContent = document.querySelector('body > :not(#page-loader)');
+
+        if (loader) {
+            // Add fade-out class to loader
+            loader.classList.add('fade-out');
+
+            // Remove loader after animation completes
             setTimeout(function () {
-                const loader = document.getElementById('page-loader');
-                const mainContent = document.querySelector('body > :not(#page-loader)');
+                loader.remove();
 
-                if (loader) {
-                    // Add fade-out class to loader
-                    loader.classList.add('fade-out');
+                // Enable smooth scrolling for the entire page
+                document.documentElement.style.scrollBehavior = 'smooth';
+                document.body.style.scrollBehavior = 'smooth';
+            }, 500); // Match with your CSS transition time
+        }
+    }, 2000); // Adjust this delay to control loader visibility duration
+});;
 
-                    // Remove loader after animation completes
-                    setTimeout(function () {
-                        loader.remove();
+// for smoth scrolling end
 
-                        // Enable smooth scrolling for the entire page
-                        document.documentElement.style.scrollBehavior = 'smooth';
-                        document.body.style.scrollBehavior = 'smooth';
-                    }, 500); // Match with your CSS transition time
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('nav a[href^="#"], .navbar a[href^="#"]');
+
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+
+            // Only apply smooth scroll if:
+            // 1. href starts with # (anchor on same page) AND
+            // 2. the target actually exists on the current page
+            if (href === '#' || href.startsWith('#')) {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault(); // Safe to prevent now
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Optional: Update URL without jumping
+                    history.pushState(null, null, href);
                 }
-            }, 2000); // Adjust this delay to control loader visibility duration
-        });;
-
-        // for smoth scrolling end
-         // Additional JavaScript for enhanced functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('nav a');
-            
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
+            }
+            // If href is about.html, courses.html, contact.html → do NOTHING
+            // → normal navigation works perfectly
         });
+    });
+});
