@@ -3,17 +3,27 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Edukate - Online Education Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <title>ALC - English Language Center</title>
+    <!-- Responsive & Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Your Academy Name offers quality online education, skilled instructors, student progress tracking, and interactive learning for all ages. Join today and start learning.">
+    <meta name="keywords"
+        content="online education, learning platform, courses, academy, student learning, teachers, school management, e-learning, study online">
+
+    <!-- Author & Branding -->
+    <meta name="ALC" content="American Language Centre">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" type="image/png" href="img/new_alc_logo.png">
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -23,36 +33,82 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- loader css link -->
+    <link rel="stylesheet" href="css/loader.css">
+    <!-- loader js link -->
+    <script src="js/loader.js"></script>
+    <!-- External links -->
+
 </head>
 
 <body>
+    <!-- PENCIL LOADER -->
+    <div id="page-loader">
+        <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
+            <defs>
+                <clipPath id="pencil-eraser">
+                    <rect height="30" width="30" ry="5" rx="5"></rect>
+                </clipPath>
+            </defs>
+            <circle transform="rotate(-113,100,100)" stroke-linecap="round" stroke-dashoffset="439.82"
+                stroke-dasharray="439.82 439.82" stroke-width="2" stroke="currentColor" fill="none" r="70"
+                class="pencil__stroke"></circle>
+            <g transform="translate(100,100)" class="pencil__rotate">
+                <g fill="none">
+                    <circle transform="rotate(-90)" stroke-dashoffset="402" stroke-dasharray="402.12 402.12"
+                        stroke-width="30" stroke="hsl(223,90%,50%)" r="64" class="pencil__body1"></circle>
+                    <circle transform="rotate(-90)" stroke-dashoffset="465" stroke-dasharray="464.96 464.96"
+                        stroke-width="10" stroke="hsl(223,90%,60%)" r="74" class="pencil__body2"></circle>
+                    <circle transform="rotate(-90)" stroke-dashoffset="339" stroke-dasharray="339.29 339.29"
+                        stroke-width="10" stroke="hsl(223,90%,40%)" r="54" class="pencil__body3"></circle>
+                </g>
+                <g transform="rotate=" -90) translate(49,0)" class="pencil__eraser">
+                    <g class="pencil__eraser-skew">
+                        <rect height="30" width="30" ry="5" rx="5" fill="hsl(223,90%,70%)"></rect>
+                        <rect clip-path="url(#pencil-eraser)" height="30" width="5" fill="hsl(223,90%,60%)"></rect>
+                        <rect height="20" width="30" fill="hsl(223,10%,90%)"></rect>
+                        <rect height="20" width="15" fill="hsl(223,10%,70%)"></rect>
+                        <rect height="20" width="5" fill="hsl(223,10%,80%)"></rect>
+                        <rect height="2" width="30" y="6" fill="hsla(223,10%,10%,0.2)"></rect>
+                        <rect height="2" width="30" y="13" fill="hsla(223,10%,10%,0.2)"></rect>
+                    </g>
+                </g>
+                <g transform="rotate(-90) translate(49,-30)" class="pencil__point">
+                    <polygon points="15 0,30 30,0 30" fill="hsl(33,90%,70%)"></polygon>
+                    <polygon points="15 0,6 30,0 30" fill="hsl(33,90%,50%)"></polygon>
+                    <polygon points="15 0,20 10,10 10" fill="hsl(223,10%,10%)"></polygon>
+                </g>
+            </g>
+        </svg>
+    </div>
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark">
+    <div class="container-fluid" style="background-color: #E20613;">
         <div class="row py-2 px-lg-5">
             <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center text-white">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
-                    <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>info@example.com</small>
+                    <small style="color: #ffffff;"><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
+                    <small class="px-3" style="color: #ffffff;">|</small>
+                    <small style="color: #ffffff;"><i class="fa fa-envelope mr-2"></i>info@example.com</small>
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
+                    <a class="text-white px-2 facebook" href="">
+                        <i class="fab fa-facebook-f" style="color: #ffffff;"></i>
                     </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-twitter"></i>
+                    <a class="text-white px-2 twitter" href="">
+                        <i class="fab fa-twitter" style="color: #ffffff;"></i>
                     </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
+                    <a class="text-white px-2 linkedin" href="">
+                        <i class="fab fa-linkedin-in" style="color: #ffffff;"></i>
                     </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-instagram"></i>
+                    <a class="text-white px-2 instagram" href="">
+                        <i class="fab fa-instagram" style="color: #ffffff;"></i>
                     </a>
-                    <a class="text-white pl-2" href="">
-                        <i class="fab fa-youtube"></i>
+                    <a class="text-white pl-2 youtube" href="">
+                        <i class="fab fa-youtube" style="color: #ffffff;"></i>
                     </a>
+
                 </div>
             </div>
         </div>
@@ -64,63 +120,75 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-book-reader mr-3"></i>Edukate</h1>
+                <img src="img/new_alc_logo.png" alt="Edukate Logo" style="height: 200px; width: auto;"
+                    class="d-inline-block align-top">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link active">About</a>
-                    <a href="course.html" class="nav-item nav-link">Courses</a>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="" class="nav-item nav-link">Courses</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="detail.html" class="dropdown-item">Course Detail</a>
+                            <!-- <a href="detail.html" class="dropdown-item">Course Detail</a>
                             <a href="feature.html" class="dropdown-item">Our Features</a>
                             <a href="team.html" class="dropdown-item">Instructors</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a> -->
+                           
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Join Us</a>
+                <a href="" id="join-us-btn" class="btn py-2 px-4 d-none d-lg-block" style="color: white;">Join Us</a>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
 
 
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px;">
-        <div class="container text-center py-5">
-            <h1 class="text-white display-1">About</h1>
-            <div class="d-inline-flex text-white mb-5">
-                <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
-                <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                <p class="m-0 text-uppercase">About</p>
-            </div>
-            <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-light bg-white text-body px-4 dropdown-toggle" type="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Courses</button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Courses 1</a>
-                            <a class="dropdown-item" href="#">Courses 2</a>
-                            <a class="dropdown-item" href="#">Courses 3</a>
-                        </div>
-                    </div>
-                    <input type="text" class="form-control border-light" style="padding: 30px 25px;" placeholder="Keyword">
-                    <div class="input-group-append">
-                        <button class="btn btn-secondary px-4 px-lg-5">Search</button>
-                    </div>
+ <!-- Header Start -->
+<div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px;">
+    <div class="container text-center py-5">
+        <h1 class="text-white display-1">About</h1>
+        <div class="d-inline-flex text-white mb-5">
+            <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <p class="m-0 text-uppercase">About</p>
+        </div>
+        
+        <!-- Added Content -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <p class="text-white lead mb-4" style="font-weight: bold;">Discover our story, mission, and the dedicated team behind our success. We're committed to excellence in everything we do.</p>
+                
+                <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                    <button class="about-sec-btn mt-2">
+                         <i class="fa fa-users me-2"></i>Expert Team
+                    </button>
+                    <button class="about-sec-btn mt-2">
+                         <i class="fa fa-award me-2"></i>Quality Service
+                    </button>
+                    <button class="about-sec-btn mt-2">
+                        <i class="fa fa-handshake me-2"></i>Trusted Partner
+                    </button>
                 </div>
+                
+                <!-- <a href="#contact" class="btn btn-light btn-lg rounded-pill px-4 py-2 mt-2">
+                    <i class="fa fa-envelope me-2"></i>Get in Touch
+                </a> -->
+                <!-- <button class="about-sec-btn">
+                    <i class="fa fa-envelope me-2"></i>
+                    Click me!</button> -->
+
             </div>
         </div>
     </div>
-    <!-- Header End -->
+</div>
+<!-- Header End -->
 
 
     <!-- About Start -->
@@ -129,12 +197,12 @@
             <div class="row">
                 <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/about.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/admin-im.jpg" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="section-title position-relative mb-4">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">About Us</h6>
+                        <h6 class="d-inline-block position-relative text-uppercase pb-2" style="color: #E20613;">About Us</h6>
                         <h1 class="display-4">First Choice For Online Education Anywhere</h1>
                     </div>
                     <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
@@ -211,7 +279,7 @@
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/feature.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/why_choos_us.webp" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -221,22 +289,26 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-5" style="margin-top: 90px;">
+    <div class="container-fluid position-relative overlay-top text-white-50 py-5"
+        style="margin-top: 90px;background-color: #312782;" loading="lazy">
         <div class="container mt-5 pt-5">
             <div class="row">
-                <div class="col-md-6 mb-5">
-                    <a href="index.html" class="navbar-brand">
-                        <h1 class="mt-n2 text-uppercase text-white"><i class="fa fa-book-reader mr-3"></i>Edukate</h1>
+                <div class="col-md-6 mb-5" id="footer-logo">
+                    <a href="index.html" class="navbar-brand text-decoration-none">
+                        <img src="img/footer-logo2.webp" loading="lazy" alt="American Language Centre Logo"
+                            style="height: 200px; width: auto; position: relative; right: 120px;"
+                            class="d-inline-block align-top">
                     </a>
-                    <p class="m-0">Accusam nonumy clita sed rebum kasd eirmod elitr. Ipsum ea lorem at et diam est, tempor rebum ipsum sit ea tempor stet et consetetur dolores. Justo stet diam ipsum lorem vero clita diam</p>
                 </div>
+
                 <div class="col-md-6 mb-5">
                     <h3 class="text-white mb-4">Newsletter</h3>
                     <div class="w-100">
                         <div class="input-group">
-                            <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
+                            <input type="text" class="form-control border-light" style="padding: 30px;"
+                                placeholder="Your Email Address">
                             <div class="input-group-append">
-                                <button class="btn btn-primary px-4">Sign Up</button>
+                                <button class="btn px-4 text-white" style="background-color: #E20613;">Sign Up</button>
                             </div>
                         </div>
                     </div>
@@ -249,10 +321,10 @@
                     <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
                     <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
                     <div class="d-flex justify-content-start mt-4">
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-twitter"></i></a>
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
-                        <a class="text-white" href="#"><i class="fab fa-2x fa-instagram"></i></a>
+                        <a class="text-white mr-4 twitter" href="#"><i class="fab fa-2x fa-twitter"></i></a>
+                        <a class="text-white mr-4 facebook" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
+                        <a class="text-white mr-4 linkedin" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
+                        <a class="text-white instagram" href="#"><i class="fab fa-2x fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -269,7 +341,8 @@
                     <h3 class="text-white mb-4">Quick Links</h3>
                     <div class="d-flex flex-column justify-content-start">
                         <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy Policy</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms & Condition</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms &
+                            Condition</a>
                         <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Regular FAQs</a>
                         <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help & Support</a>
                         <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
@@ -278,30 +351,23 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark text-white-50 border-top py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0">Copyright &copy; <a class="text-white" href="#">Your Site Name</a>. All Rights Reserved.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center text-md-right">
-                    <p class="m-0">Designed by <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Footer End -->
 
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/923438280248?text=Hello%20there!%20Thank%20you%20for%20contacting%20us.%20How%20may%20I%20assist%20you%20today%3F"
+        class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Contact us on WhatsApp</span>
+    </a>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <a href="#" class="btn btn-lg rounded-0 btn-lg-square back-to-top" style="background-color: #312782;"><i
+            class="fa fa-angle-double-up" style="color: #ffffff;"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Libraries - FIXED VERSION -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
@@ -309,6 +375,32 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        // for loader code end
+
+        const texts = ['English Language Proficiency Programs', 'Education Courses'];
+        let i = 0, j = 0, del = false;
+        const el = document.getElementById('typed');
+
+        function type() {
+            const txt = texts[i];
+            if (del && j <= 0) {
+                el.textContent = ''; // Clear text instantly before next cycle
+                j = 0;
+                del = false;
+                i = (i + 1) % texts.length;
+                setTimeout(type, 500); // Delay before starting next text
+                return;
+            }
+            el.textContent = txt.slice(0, del ? j-- : j++);
+            if (!del && j > txt.length) { del = true; return setTimeout(type, 2000); }
+            setTimeout(type, del ? 50 : 100);
+        }
+        type();
+
+
+        // THIS LINE KILLS ALL NAVBAR LINKS
+    </script>
 </body>
 
-</html>
+</html> 
