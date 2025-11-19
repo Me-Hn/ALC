@@ -379,32 +379,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script>
-        // for loader code end
-
-        const texts = ['English Language Proficiency Programs', 'Education Courses'];
-        let i = 0, j = 0, del = false;
-        const el = document.getElementById('typed');
-
-        function type() {
-            const txt = texts[i];
-            if (del && j <= 0) {
-                el.textContent = ''; // Clear text instantly before next cycle
-                j = 0;
-                del = false;
-                i = (i + 1) % texts.length;
-                setTimeout(type, 500); // Delay before starting next text
-                return;
-            }
-            el.textContent = txt.slice(0, del ? j-- : j++);
-            if (!del && j > txt.length) { del = true; return setTimeout(type, 2000); }
-            setTimeout(type, del ? 50 : 100);
-        }
-        type();
-
-
-        // THIS LINE KILLS ALL NAVBAR LINKS
-    </script>
 </body>
 
 </html> 
