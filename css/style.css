@@ -11080,43 +11080,43 @@ h6,
 /* about sec btn start */
 
 .about-sec-btn {
-    padding: 15px 25px;
-    border: unset;
-    border-radius: 15px;
-    color: #212121;
-    z-index: 1;
-    background: #e8e8e8;
-    position: relative;
-    font-weight: 1000;
-    font-size: 17px;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    transition: all 250ms;
-    overflow: hidden;
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
 }
 
 .about-sec-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    border-radius: 15px;
-    background-color: #312782;
-    /* background-color: #E20613; */
-    z-index: -1;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    transition: all 250ms;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #312782;
+  /* background-color: #E20613; */
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
 }
 
 .about-sec-btn:hover {
-    color: #e8e8e8;
+  color: #e8e8e8;
 }
 
 .about-sec-btn:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
 
@@ -11189,7 +11189,7 @@ h6,
   /* color: rgb(0, 0, 0) !important; */
 }
 
-.text-white::selection{
+.text-white::selection {
   background: #ffffff;
   color: #120F2D;
 }
@@ -12116,3 +12116,215 @@ h6,
 
   }
 }
+
+/* msg from founder start */
+
+.tag-on-left {
+  position: relative;
+  left: 45px;
+  background-color: #312782;
+  height: 120px;
+  width: 45px;
+}
+
+
+.founder-msg-header,
+h2 {
+  margin-left: 30px;
+
+}
+
+.founder-msg-para {
+  margin-left: 30px;
+  font-weight: 800;
+}
+
+.botton-lane {
+  height: 25px;
+  width: 45%;
+  background-color: #312782;
+
+
+}
+
+.dot-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #E20613;
+  border-radius: 50%;
+
+  margin-right: 6px;
+  /* space between dots */
+
+}
+
+.lane-after-dot {
+  height: 2px;
+  width: 280px;
+  background-color: #E20613;
+
+}
+
+@media (max-width: 768px) {
+  .dot-wrapper {
+    margin-left: 20px !important;
+    justify-content: flex-start;
+  }
+
+  .botton-lane {
+    display: none;
+  }
+
+  .founder-msg-para {
+    margin-left: 5px !important;
+    word-spacing: normal;
+  }
+}
+
+
+.second-dot {
+  margin-top: 80px;
+  margin-left: 350px;
+}
+
+@media (max-width: 768px) {
+  .second-dot {
+    margin-left: 20px;
+    /* fix for mobile */
+  }
+}
+
+.founder-name {
+  margin-top: 130px;
+  margin-left: 30px;
+  position: relative;
+  /* IMPORTANT */
+}
+
+/* Circle behind the first character */
+.back-shadow {
+  position: absolute;
+  left: -20px;
+  /* adjust horizontally */
+  top: -10px;
+  /* adjust vertically */
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: salmon;
+  opacity: 0.4;
+  z-index: 1;
+  /* behind text */
+}
+
+/* Place first letter above the circle */
+.first-letter {
+  position: relative;
+  z-index: 2;
+}
+
+
+.founder-name h4 {
+  text-transform: uppercase;
+}
+
+
+/* Right side container */
+.right-side-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 550px;
+  /* keep enough height */
+}
+
+/* Yellow background full height at right */
+.blue-bg-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  /* adjust width */
+  height: 100%;
+  background-color: #312782;
+  z-index: 1;
+}
+
+/* Image container (smaller & with top/bottom spacing) */
+.founder-image-box {
+  position: absolute;
+  /* Keep original positioning */
+  top: 50px;
+  bottom: 50px;
+  left: 40px;
+  width: 60%;
+  z-index: 2;
+
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: #ffffff 5px 10px 15px -5px;
+
+  /* KEY CHANGE: Hides the text overlay when it's outside the box */
+  overflow: hidden;
+
+  /* Removed 'display: flex' and 'flex-direction: column' 
+       as absolute positioning on the overlay is more straightforward
+       for this specific effect. */
+}
+
+.founder-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* crop nicely */
+  border-radius: 4px;
+}
+
+.founder-info-overlay {
+    position: absolute;
+    bottom: -50%; /* Start position: Hidden below the box (50% of its own height) */
+    left: 0;
+    width: 100%;
+    height: 40%; /* KEY CHANGE: The overlay is 50% of the parent box height */
+    
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    
+    transition: bottom 0.4s cubic-bezier(0.19, 1, 0.22, 1); /* Smoother transition */
+    
+    text-align: center;
+    /* Use flexbox to vertically center the content within the 50% slide */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.founder-info-overlay h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.founder-info-overlay p {
+  font-size: 0.9em;
+  margin-top: 5px;
+  color: #ffffff;
+}
+
+
+.founder-image-box:hover .founder-info-overlay {
+  bottom: 0;
+  /* End position: Right at the bottom of the box */
+}
+
+/* msg from founder end */
